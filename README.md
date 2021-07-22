@@ -1,7 +1,6 @@
 # JoanKouloumba_2_14072021
 
-Parcours Développeur Web chez OPENCLASSROOM - projet 2 : Transformez une maquette en site web
-
+Parcours Développeur Web chez OPENCLASSROOM - projet 2 : Transformez une maquette en site web (OC P2)
 Énoncé du projet (cahier des charges) :
 
 L'objectif du projet est d'intégrer la maquette responsive du site RESERVIA en HTML et CSS.
