@@ -1,9 +1,13 @@
 # JoanKouloumba_2_14072021
 
 Parcours Développeur Web chez OPENCLASSROOM - projet 2 : Transformez une maquette en site web (OC P2)
+<<<<<<< HEAD
 HEAD
 
 cb97599 (initialisation projet 2 - first commit)
+=======
+
+>>>>>>> cb97599 (initialisation projet 2 - first commit)
 Énoncé du projet (cahier des charges) :
 
 L'objectif du projet est d'intégrer la maquette responsive du site RESERVIA en HTML et CSS.
