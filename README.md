@@ -2,6 +2,10 @@
 
 Parcours Développeur Web chez OPENCLASSROOM - projet 2 : Transformez une maquette en site web (OC P2)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cb97599 (initialisation projet 2 - first commit)
 =======
 
 >>>>>>> cb97599 (initialisation projet 2 - first commit)
