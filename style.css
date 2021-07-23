@@ -1,0 +1,126 @@
+/*Déclaration de variable couleur dans la pseudo-classe root*/
+:root {
+  --clear_blue: #deebff;
+  --blue: #0065fc;
+  --gray: #f2f2f2;
+}
+
+/*Style Général*/
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+}
+
+/*Style HEADER*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 96%;
+  margin: 0 auto;
+}
+
+.logo {
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0rem;
+}
+
+.navbar li {
+  margin-right: 3rem;
+  padding: 2rem 0;
+  font-weight: 500;
+}
+
+.navbar li:hover {
+  border-top: 0.2rem solid var(--blue);
+  color: var(--blue);
+  padding: 1.8rem 0;
+}
+
+.navlink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.subscribe_link {
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+/*header sur écran mobile*/
+
+@media screen and (max-width: 767px) {
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: turquoise;
+    width: 100%;
+  }
+  /*.logo {
+    position: relative;
+    top: 1.5rem;
+    background-color: violet;
+  }*/
+
+  nav {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+  }
+
+  .navbar {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar li {
+    margin: auto;
+    padding: 2rem 0;
+    font-weight: 500;
+    font-size: 1.5rem;
+    width: 50%;
+    text-align: center;
+    border-bottom: 0.2rem solid var(--gray);
+  }
+
+  .navbar li:hover {
+    border-top: none;
+    border-bottom: 0.2rem solid var(--blue);
+    color: var(--blue);
+    padding: 2rem 0;
+  }
+
+  .subscribe {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 3%;
+    top: 4%;
+  }
+
+  .subscribe_link {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
