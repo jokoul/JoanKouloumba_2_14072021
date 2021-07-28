@@ -436,7 +436,7 @@ article:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 3rem 2rem 1rem 2rem;
+  margin: 3rem 1rem 1rem 1rem;
 }
 .popular_title h1 {
   font-size: 1.4rem;
@@ -448,16 +448,13 @@ article:hover {
 .popular_cards {
   width: 98%;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 .popular_cards_1,
 .popular_cards_2,
 .popular_cards_3 {
-  width: 94%;
+  width: 90%;
   margin: 2rem auto;
-  height: 10rem;
+  height: 12rem;
   border-radius: 1.5rem;
   padding: 0.3rem;
   background-color: white;
@@ -505,12 +502,14 @@ article:hover {
     margin: 2rem 2rem 1rem 2rem;
   }
   .popular_cards {
-    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
   }
   .popular_cards_1,
   .popular_cards_2,
   .popular_cards_3 {
-    width: 95%;
+    width: 15rem;
     margin-bottom: 2rem;
     height: 10rem;
   }
@@ -533,14 +532,19 @@ article:hover {
     width: 100%;
     margin-bottom: 2rem;
   }
+  .popular_title {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
   .popular_cards {
     flex-direction: column;
   }
   .popular_cards_1,
   .popular_cards_2,
   .popular_cards_3 {
-    width: 96%;
-    margin: 0 auto 2rem auto;
+    width: 90%;
+    margin-top: 0;
+    margin-bottom: 2rem;
     height: 10rem;
   }
   .hosting {
@@ -559,5 +563,188 @@ article:hover {
     width: 90%;
     height: 13.5rem;
     margin: 1rem auto;
+  }
+}
+
+/*STYLE ACTIVITY*/
+
+.activity {
+  width: 96%;
+  margin: 0 auto;
+}
+.activity h1 {
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+.activity_cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.activity_cards_1,
+.activity_cards_2,
+.activity_cards_3,
+.activity_cards_4 {
+  width: 23%;
+  height: 30.5rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: transform 0.3s;
+}
+.activity_cards_1:hover,
+.activity_cards_2 .sous_cards_a:hover,
+.activity_cards_2 .sous_cards_b:hover,
+.activity_cards_3:hover,
+.activity_cards_4 .sous_cards_a:hover,
+.activity_cards_4 .sous_cards_b:hover {
+  transform: scale(1.02);
+}
+.activity_cards_1 {
+  box-shadow: 0 0 16px rgb(200, 200, 200);
+}
+
+.activity_cards_2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.activity_cards_2 .sous_cards_a {
+  height: 60%;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 16px rgb(200, 200, 200);
+}
+.activity_cards_2 .sous_cards_b {
+  height: 35%;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 16px rgb(200, 200, 200);
+}
+.activity_cards_3 {
+  box-shadow: 0 0 16px rgb(200, 200, 200);
+}
+.activity_cards_4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.activity_cards_4 .sous_cards_a {
+  height: 47%;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 16px rgb(200, 200, 200);
+}
+.activity_cards_4 .sous_cards_b {
+  height: 47%;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 16px rgb(200, 200, 200);
+}
+.activity_cards .card_image {
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+#Vieux_p .card_image {
+  height: 27rem;
+}
+#Fort_p .card_image {
+  height: 15rem;
+}
+#Ile_f .card_image {
+  height: 7.5rem;
+}
+#Parc_c .card_image {
+  height: 27rem;
+}
+#Notre_d .card_image {
+  height: 11rem;
+}
+#Parc_l .card_image {
+  height: 11rem;
+}
+.activity_cards img {
+  object-fit: cover;
+}
+.activity_cards h3 {
+  font-weight: 800;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/*STYLE ACTIVITY sur tablette*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .activity_cards {
+    margin-bottom: 0rem;
+  }
+  .activity_cards_1,
+  .activity_cards_2,
+  .activity_cards_3,
+  .activity_cards_4 {
+    width: 48%;
+    margin-bottom: 2rem;
+  }
+}
+
+/*STYLE ACTIVITY sur smartphone*/
+@media screen and (max-width: 767px) {
+  .activity h1 {
+    margin-left: 2rem;
+  }
+  .activity_cards {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 0rem;
+  }
+  .activity_cards_1,
+  .activity_cards_2,
+  .activity_cards_3,
+  .activity_cards_4 {
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+  .activity_cards_2 {
+    height: 30rem;
+    margin-bottom: 2rem;
+  }
+  .activity_cards_4 {
+    height: 30rem;
+    margin-bottom: 2rem;
+  }
+  #Vieux_p {
+    height: 14rem;
+  }
+  #Vieux_p .card_image {
+    height: 70%;
+  }
+
+  #Fort_p {
+    height: 14rem;
+  }
+  #Fort_p .card_image {
+    height: 70%;
+  }
+  #Ile_f {
+    height: 14rem;
+  }
+  #Ile_f .card_image {
+    height: 70%;
+  }
+  #Parc_c {
+    height: 14rem;
+  }
+  #Parc_c .card_image {
+    height: 70%;
+  }
+  #Notre_d {
+    height: 14rem;
+  }
+  #Notre_d .card_image {
+    height: 70%;
+  }
+  #Parc_l {
+    height: 14rem;
+  }
+  #Parc_l .card_image {
+    height: 70%;
   }
 }
