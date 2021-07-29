@@ -6,7 +6,7 @@
 }
 
 /*Style Général*/
-body {
+body { /* RV privilégier les class: body non concerné*/
   margin: 0;
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
@@ -24,8 +24,8 @@ p {
   font-size: 0.9rem;
 }
 
-/*Style HEADER*/
-header {
+/*Style HEADER*/ 
+header { /* RV privilégier les class*/
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -37,7 +37,7 @@ header {
   padding: 1rem 1rem 1rem 0;
 }
 
-nav {
+nav {/* RV privilégier les class*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,7 +86,7 @@ nav {
     margin: 1rem 0 0 2rem;
   }
 
-  nav {
+  nav {/* RV privilégier les class*/
     display: flex;
     flex-wrap: wrap-reverse;
     width: 100%;
@@ -193,7 +193,7 @@ form {
   opacity: 0.8;
 }
 
-.search_button {
+.search_button {/* camelCase pour nommé les class seachButton*/
   display: none;
 }
 
@@ -345,12 +345,8 @@ form {
   width: 96%;
   margin: 0 auto;
 }
-.hosting_cards_1,
-.hosting_cards_2,
-.hosting_cards_3,
-.hosting_cards_4,
-.hosting_cards_5,
-.hosting_cards_6 {
+/**.hosting_cards_1,/* RV une class pour plusieurs balises HTML*/
+.hostingCard { /*.hostingCard*/
   width: 30%;
   height: 13.5rem;
   border-radius: 1.5rem;
@@ -360,10 +356,21 @@ form {
   box-shadow: 0 0 15px rgb(200, 200, 200);
   cursor: pointer;
 }
-article {
+.hostingCardBis { /*.hostingCard*/
+  width: 30%;
+  height: 13.5rem;
+  border-radius: 1.5rem;
+  margin: 1rem auto;
+  padding: 0.3rem;
+  background-color: white;
+  box-shadow: 0 0 15px rgb(200, 200, 200);
+  cursor: pointer;
+  color: #0065fc;
+}
+article {/* RV privilégier les class*/
   transition: transform 0.3s;
 }
-article:hover {
+article:hover {/* RV privilégier les class*/
   transform: scale(1.03);
 }
 .card_image {
@@ -451,7 +458,7 @@ article:hover {
 }
 .popular_cards_1,
 .popular_cards_2,
-.popular_cards_3 {
+.popular_cards_3 {/* RV une class pour plusieurs balises HTML*/
   width: 90%;
   margin: 2rem auto;
   height: 12rem;
@@ -506,7 +513,7 @@ article:hover {
     justify-content: space-evenly;
     flex-wrap: wrap;
   }
-  .popular_cards_1,
+  .popular_cards_1,/* RV une class pour plusieurs balises HTML*/
   .popular_cards_2,
   .popular_cards_3 {
     width: 15rem;
@@ -554,7 +561,7 @@ article:hover {
     flex-direction: column;
     justify-content: space-evenly;
   }
-  .hosting_cards_1,
+  .hosting_cards_1,/* RV une class pour plusieurs balises HTML*/
   .hosting_cards_2,
   .hosting_cards_3,
   .hosting_cards_4,
@@ -584,7 +591,7 @@ article:hover {
   justify-content: space-between;
   margin-bottom: 2rem;
 }
-.activity_cards_1,
+.activity_cards_1,/* RV une class pour plusieurs balises HTML*/
 .activity_cards_2,
 .activity_cards_3,
 .activity_cards_4 {
@@ -595,7 +602,7 @@ article:hover {
   box-sizing: border-box;
   transition: transform 0.3s;
 }
-.activity_cards_1:hover,
+.activity_cards_1:hover,/* RV à revoir*/
 .activity_cards_2 .sous_cards_a:hover,
 .activity_cards_2 .sous_cards_b:hover,
 .activity_cards_3:hover,
@@ -655,7 +662,7 @@ article:hover {
 #Parc_c .card_image {
   height: 27rem;
 }
-#Notre_d .card_image {
+#Notre_d .card_image {/* RV class VS id*/
   height: 11rem;
 }
 #Parc_l .card_image {
@@ -695,7 +702,7 @@ article:hover {
     align-items: center;
     margin-bottom: 0rem;
   }
-  .activity_cards_1,
+  .activity_cards_1,/* RV une class pour plusieurs balises HTML*/
   .activity_cards_2,
   .activity_cards_3,
   .activity_cards_4 {
@@ -710,7 +717,7 @@ article:hover {
     height: 30rem;
     margin-bottom: 2rem;
   }
-  #Vieux_p {
+  #Vieux_p {/* RV class VS id*/
     height: 14rem;
   }
   #Vieux_p .card_image {
