@@ -6,7 +6,8 @@
 }
 
 /*Style Général*/
-body { /* RV privilégier les class: body non concerné*/
+body {
+  /* RV privilégier les class: body non concerné*/
   margin: 0;
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
@@ -24,8 +25,9 @@ p {
   font-size: 0.9rem;
 }
 
-/*Style HEADER*/ 
-header { /* RV privilégier les class*/
+/*Style HEADER*/
+.header {
+  /* RV privilégier les class*/ /*joan : correction OK*/
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -37,37 +39,38 @@ header { /* RV privilégier les class*/
   padding: 1rem 1rem 1rem 0;
 }
 
-nav {/* RV privilégier les class*/
+.navbar {
+  /* RV privilégier les class*/ /*joan : correction OK*/
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.navbar {
+.navbarList {
   display: flex;
   flex-direction: row;
   list-style-type: none;
   margin: 0rem;
 }
 
-.navbar li {
+.navbarList li {
   margin-right: 3rem;
   padding: 2rem 0;
   font-weight: 500;
 }
 
-.navbar li:hover {
+.navbarList li:hover {
   border-top: 0.2rem solid var(--blue);
   color: var(--blue);
   padding: 1.8rem 0;
 }
 
-.navlink {
+.navLink {
   color: inherit;
   text-decoration: none;
 }
 
-.subscribe_link {
+.subscribeLink {
   color: var(--blue);
   text-decoration: none;
   font-weight: 800;
@@ -76,30 +79,31 @@ nav {/* RV privilégier les class*/
 /*header sur écran mobile*/
 
 @media screen and (max-width: 767px) {
-  header {
+  .header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
   }
   .logo {
-    margin: 1rem 0 0 2rem;
+    margin: 0 0 0 2rem;
   }
 
-  nav {/* RV privilégier les class*/
+  .navbar {
+    /* RV privilégier les class*/ /*joan : correction OK*/
     display: flex;
     flex-wrap: wrap-reverse;
     width: 100%;
   }
 
-  .navbar {
+  .navbarList {
     display: flex;
     width: 100%;
     margin: 0;
     padding: 0;
   }
 
-  .navbar li {
+  .navbarList li {
     margin: auto;
     padding: 2rem 0;
     font-weight: 500;
@@ -109,7 +113,7 @@ nav {/* RV privilégier les class*/
     border-bottom: 0.2rem solid var(--gray);
   }
 
-  .navbar li:hover {
+  .navbarList li:hover {
     border-top: none;
     border-bottom: 0.2rem solid var(--blue);
     color: var(--blue);
@@ -124,7 +128,7 @@ nav {/* RV privilégier les class*/
     top: 5%;
   }
 
-  .subscribe_link {
+  .subscribeLink {
     color: var(--blue);
     text-decoration: none;
     font-weight: 800;
@@ -136,7 +140,7 @@ nav {/* RV privilégier les class*/
 
 /*STYLE SEARCH */
 
-.container_search {
+.containerSearch {
   display: flex;
   flex-direction: column;
   width: 96%;
@@ -144,25 +148,26 @@ nav {/* RV privilégier les class*/
 }
 
 /*Style search : titre et formulaire*/
-.search_title h1 {
+.searchTitle h1 {
   font-weight: 800;
 }
-.search_title p {
+.searchTitle p {
   font-weight: 500;
+  font-size: 1rem;
 }
 
-form {
+.form {
   display: flex;
 }
 
-.search_locate_logo {
+.searchLocateLogo {
   background-color: var(--gray);
   padding: 1rem;
   border: 0.1rem solid var(--gray);
   border-radius: 1rem 0 0 1rem;
 }
 
-.search_text {
+.searchText {
   width: 15rem;
   border-top: 0.1rem solid var(--gray);
   border-bottom: 0.1rem solid var(--gray);
@@ -172,14 +177,14 @@ form {
   outline: none;
 }
 
-.search_text::placeholder {
+.searchText::placeholder {
   font-weight: 800;
   font-size: 1rem;
   padding: 1rem;
   color: black;
 }
 
-.search_submit {
+.searchSubmit {
   width: 7rem;
   border: none;
   background-color: var(--blue);
@@ -189,11 +194,12 @@ form {
   font-weight: 700;
   cursor: pointer;
 }
-.search_submit:hover {
+.searchSubmit:hover {
   opacity: 0.8;
 }
 
-.search_button {/* camelCase pour nommé les class seachButton*/
+.searchButton {
+  /* camelCase pour nommé les class searchButton*/
   display: none;
 }
 
@@ -207,18 +213,18 @@ form {
   margin: 1.5rem 0;
 }
 
-.filters_title {
+.filtersTitle {
   font-weight: 800;
 }
 
-.filters_list {
+.filtersList {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   padding-left: 1.5rem;
 }
 
-.filters_list li {
+.filtersList li {
   list-style-type: none;
   margin-right: 1.5rem;
   border: 0.2rem solid var(--gray);
@@ -230,11 +236,11 @@ form {
   transition: transform 300ms;
 }
 
-.filters_list li:hover {
+.filtersList li:hover {
   transform: scale(1.1);
 }
 
-.filters_list i {
+.filtersList i {
   color: var(--blue);
   background-color: var(--clear_blue);
   border-radius: 100%;
@@ -276,7 +282,7 @@ form {
 /*Style search sur tablette*/
 
 @media screen and (min-width: 768px) and (max-width: 965px) {
-  .filters_list li {
+  .filtersList li {
     margin-bottom: 1rem;
   }
   .information {
@@ -285,7 +291,7 @@ form {
 }
 
 @media screen and (max-width: 940px) {
-  .filters_list {
+  .filtersList {
     padding-left: 0;
   }
 }
@@ -293,14 +299,14 @@ form {
 /*Style search sur mobile*/
 
 @media screen and (max-width: 767px) {
-  .filters_list li {
+  .filtersList li {
     margin-bottom: 1rem;
   }
-  .search_submit {
+  .searchSubmit {
     display: none;
   }
 
-  .search_button {
+  .searchButton {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -312,7 +318,7 @@ form {
     font-size: 1rem;
     cursor: pointer;
   }
-  .search_button:hover {
+  .searchButton:hover {
     opacity: 0.8;
   }
 }
@@ -328,25 +334,25 @@ form {
 .hosting {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   background-color: var(--gray);
   border-radius: 1.5rem;
   width: 70%;
 }
-.hosting h1 {
+.hosting h2 {
   margin: 3rem 0 1rem 2rem;
   font-size: 1.4rem;
   font-weight: 800;
 }
-.hosting_cards {
+.hostingCards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   width: 96%;
   margin: 0 auto;
 }
-/**.hosting_cards_1,/* RV une class pour plusieurs balises HTML*/
-.hostingCard { /*.hostingCard*/
+/**.hosting_cards_1,/* RV une class pour plusieurs balises HTML*/ /*Joan : correction ok*/
+.hostingCard {
+  /*.hostingCard*/
   width: 30%;
   height: 13.5rem;
   border-radius: 1.5rem;
@@ -356,78 +362,71 @@ form {
   box-shadow: 0 0 15px rgb(200, 200, 200);
   cursor: pointer;
 }
-.hostingCardBis { /*.hostingCard*/
-  width: 30%;
-  height: 13.5rem;
-  border-radius: 1.5rem;
-  margin: 1rem auto;
-  padding: 0.3rem;
-  background-color: white;
-  box-shadow: 0 0 15px rgb(200, 200, 200);
-  cursor: pointer;
-  color: #0065fc;
-}
-article {/* RV privilégier les class*/
+.animate {
+  /* RV privilégier les class*/ /*Joan : correction OK*/
   transition: transform 0.3s;
 }
-article:hover {/* RV privilégier les class*/
+.animate:hover {
+  /* RV privilégier les class*/ /*Joan : correction OK*/
   transform: scale(1.03);
 }
-.card_image {
+.cardImage {
   width: 100%;
   height: 60%;
   margin: 0 auto;
 }
-.card_image img {
+.cardImage img {
   border-radius: 1.5rem 1.5rem 0 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   box-sizing: border-box;
 }
-.card_text {
+.cardText {
   height: 40%;
   width: 100%;
   margin-left: 1rem;
   box-sizing: border-box;
 }
-.card_text h3 {
+.cardText h3 {
   font-weight: 800;
   margin-bottom: 0.5rem;
 }
-.card_text p {
+.cardText p {
   font-weight: 600;
   margin: 0 0 0.5rem 0;
 }
-.card_text span {
+.cardText span {
   font-weight: 800;
 }
 .stars {
   color: var(--blue);
 }
 .stars i {
-  width: 0.3rem;
-  height: 0.3rem;
-  margin: 0.3rem;
+  width: 0.7rem;
+  font-size: 0.85rem;
 }
-.hosting_cards_1 i:nth-child(5) {
+.notation1 i:nth-child(5) {
   color: rgb(200, 200, 200);
 }
-.hosting_cards_3 i:nth-child(5) {
+.notation3 i:nth-child(5) {
   color: rgb(200, 200, 200);
 }
-.hosting_cards_4 i:nth-child(4) {
+.notation4 i:nth-child(4) {
   color: rgb(200, 200, 200);
 }
-.hosting_cards_4 i:nth-child(5) {
+.notation4 i:nth-child(5) {
   color: rgb(200, 200, 200);
 }
-.hosting_cards_5 i:nth-child(5) {
+.notation5 i:nth-child(5) {
   color: rgb(200, 200, 200);
 }
-.hosting h2 {
-  margin: 2rem auto 3rem 2rem;
+.hosting h3 {
+  font-weight: 800;
   cursor: pointer;
+}
+.hosting > h3 {
+  margin-left: 2rem;
 }
 /*STYLE ASIDE*/
 .popular {
@@ -439,29 +438,29 @@ article:hover {/* RV privilégier les class*/
   flex-direction: column;
   flex-wrap: wrap;
 }
-.popular_title {
+.popularTitle {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 3rem 1rem 1rem 1rem;
+  margin: 3rem 1rem 0 1rem;
 }
-.popular_title h1 {
+.popularTitle h2 {
   font-size: 1.4rem;
   font-weight: 800;
+  margin: 0 0;
 }
-.increase_logo i {
+.increaseLogo i {
   font-size: 1.5rem;
 }
-.popular_cards {
+.popularCards {
   width: 98%;
   margin: 0 auto;
 }
-.popular_cards_1,
-.popular_cards_2,
-.popular_cards_3 {/* RV une class pour plusieurs balises HTML*/
+.popularCard {
+  /* RV une class pour plusieurs balises HTML*/ /*Joan : correction OK*/
   width: 90%;
   margin: 2rem auto;
-  height: 12rem;
+  height: 10rem;
   border-radius: 1.5rem;
   padding: 0.3rem;
   background-color: white;
@@ -470,27 +469,28 @@ article:hover {/* RV privilégier les class*/
   box-sizing: border-box;
   display: flex;
 }
-.popular_cards .card_image {
+.popularCard .cardImage {
   flex: 2;
   height: 100%;
-  width: 100%;
 }
-.popular_cards img {
+.popularCard img {
   border-radius: 1.5rem 0 0 1.5rem;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.popular_cards .card_text {
+.popularCard .popularCardText {
   display: flex;
   flex-direction: column;
   flex: 3;
   flex-wrap: wrap;
   height: 100%;
-  width: 100%;
-  box-sizing: border-box;
+  margin-left: 1rem;
 }
-.popular_stars {
+.popularCardText p {
+  margin: 0;
+}
+.popularStars {
   margin: auto auto 0.5rem 0;
 }
 
@@ -505,22 +505,20 @@ article:hover {/* RV privilégier les class*/
     width: 100%;
     margin-bottom: 2rem;
   }
-  .popular_title {
+  .popularTitle {
     margin: 2rem 2rem 1rem 2rem;
   }
-  .popular_cards {
+  .popularCards {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
   }
-  .popular_cards_1,/* RV une class pour plusieurs balises HTML*/
-  .popular_cards_2,
-  .popular_cards_3 {
+  .popularCard {
     width: 15rem;
     margin-bottom: 2rem;
     height: 10rem;
   }
-  .popular_stars {
+  .popularStars {
     margin: auto auto 0.2rem 0;
   }
   .hosting {
@@ -539,16 +537,15 @@ article:hover {/* RV privilégier les class*/
     width: 100%;
     margin-bottom: 2rem;
   }
-  .popular_title {
+  .popularTitle {
     margin-left: 2rem;
     margin-right: 2rem;
   }
-  .popular_cards {
+  .popularCards {
     flex-direction: column;
+    margin-top: 2rem;
   }
-  .popular_cards_1,
-  .popular_cards_2,
-  .popular_cards_3 {
+  .popularCard {
     width: 90%;
     margin-top: 0;
     margin-bottom: 2rem;
@@ -557,16 +554,11 @@ article:hover {/* RV privilégier les class*/
   .hosting {
     width: 100%;
   }
-  .hosting_cards {
+  .hostingCards {
     flex-direction: column;
     justify-content: space-evenly;
   }
-  .hosting_cards_1,/* RV une class pour plusieurs balises HTML*/
-  .hosting_cards_2,
-  .hosting_cards_3,
-  .hosting_cards_4,
-  .hosting_cards_5,
-  .hosting_cards_6 {
+  .hostingCard {
     width: 90%;
     height: 13.5rem;
     margin: 1rem auto;
@@ -579,22 +571,19 @@ article:hover {/* RV privilégier les class*/
   width: 96%;
   margin: 0 auto;
 }
-.activity h1 {
+.activity h2 {
+  font-size: 1.4rem;
   font-weight: 800;
   margin-bottom: 2rem;
 }
-.activity_cards {
+.activityCards {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: 100%;
   justify-content: space-between;
   margin-bottom: 2rem;
 }
-.activity_cards_1,/* RV une class pour plusieurs balises HTML*/
-.activity_cards_2,
-.activity_cards_3,
-.activity_cards_4 {
+.activityCard {
   width: 23%;
   height: 30.5rem;
   border-radius: 1.5rem;
@@ -602,76 +591,74 @@ article:hover {/* RV privilégier les class*/
   box-sizing: border-box;
   transition: transform 0.3s;
 }
-.activity_cards_1:hover,/* RV à revoir*/
-.activity_cards_2 .sous_cards_a:hover,
-.activity_cards_2 .sous_cards_b:hover,
-.activity_cards_3:hover,
-.activity_cards_4 .sous_cards_a:hover,
-.activity_cards_4 .sous_cards_b:hover {
+.vieuxP:hover,/* RV à revoir*//*Joan : correction OK*/
+.fortP:hover,
+.ileF:hover,
+.parcC:hover,
+.notreD:hover,
+.parcL:hover {
   transform: scale(1.02);
 }
-.activity_cards_1 {
+.activityCard:nth-child(1),
+.activityCard:nth-child(3) {
   box-shadow: 0 0 16px rgb(200, 200, 200);
 }
 
-.activity_cards_2 {
+.activityCard:nth-child(2) {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.activity_cards_2 .sous_cards_a {
+.sousCard {
+  border-radius: 1.5rem;
+  box-shadow: 0 0 16px rgb(200, 200, 200);
+}
+.fortP {
   height: 60%;
-  border-radius: 1.5rem;
-  box-shadow: 0 0 16px rgb(200, 200, 200);
 }
-.activity_cards_2 .sous_cards_b {
+.ileF {
   height: 35%;
-  border-radius: 1.5rem;
-  box-shadow: 0 0 16px rgb(200, 200, 200);
 }
-.activity_cards_3 {
-  box-shadow: 0 0 16px rgb(200, 200, 200);
-}
-.activity_cards_4 {
+.activityCard:nth-child(4) {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.activity_cards_4 .sous_cards_a {
+.notreD {
   height: 47%;
-  border-radius: 1.5rem;
-  box-shadow: 0 0 16px rgb(200, 200, 200);
 }
-.activity_cards_4 .sous_cards_b {
+.parcL {
   height: 47%;
-  border-radius: 1.5rem;
-  box-shadow: 0 0 16px rgb(200, 200, 200);
 }
-.activity_cards .card_image {
+
+.activityCards .cardImage {
   border-radius: 1.5rem 1.5rem 0 0;
 }
-#Vieux_p .card_image {
+.vieuxP .cardImage {
   height: 27rem;
 }
-#Fort_p .card_image {
+.fortP .cardImage {
   height: 15rem;
 }
-#Ile_f .card_image {
+.ileF .cardImage {
   height: 7.5rem;
 }
-#Parc_c .card_image {
+
+.parcC .cardImage {
   height: 27rem;
 }
-#Notre_d .card_image {/* RV class VS id*/
+
+.notreD .cardImage {
+  /* RV class VS id*/ /*Joan : correction OK*/
   height: 11rem;
 }
-#Parc_l .card_image {
+.parcL .cardImage {
   height: 11rem;
 }
-.activity_cards img {
+.activityCard img {
   object-fit: cover;
 }
-.activity_cards h3 {
+.activityCard h3 {
   font-weight: 800;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -679,13 +666,11 @@ article:hover {/* RV privilégier les class*/
 
 /*STYLE ACTIVITY sur tablette*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .activity_cards {
+  .activityCards {
     margin-bottom: 0rem;
   }
-  .activity_cards_1,
-  .activity_cards_2,
-  .activity_cards_3,
-  .activity_cards_4 {
+
+  .activityCard {
     width: 48%;
     margin-bottom: 2rem;
   }
@@ -693,65 +678,58 @@ article:hover {/* RV privilégier les class*/
 
 /*STYLE ACTIVITY sur smartphone*/
 @media screen and (max-width: 767px) {
-  .activity h1 {
+  .activity h2 {
     margin-left: 2rem;
   }
-  .activity_cards {
+  .activityCards {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 0rem;
   }
-  .activity_cards_1,/* RV une class pour plusieurs balises HTML*/
-  .activity_cards_2,
-  .activity_cards_3,
-  .activity_cards_4 {
+
+  .activityCard {
     width: 90%;
     margin-bottom: 2rem;
   }
-  .activity_cards_2 {
-    height: 30rem;
-    margin-bottom: 2rem;
-  }
-  .activity_cards_4 {
-    height: 30rem;
-    margin-bottom: 2rem;
-  }
-  #Vieux_p {/* RV class VS id*/
+  .vieuxP {
+    /* RV class VS id*/ /*Joan : correction OK*/
     height: 14rem;
   }
-  #Vieux_p .card_image {
+  .vieuxP .cardImage {
     height: 70%;
   }
-
-  #Fort_p {
+  /*.activityCard:nth-child(1) {
+    height: 14rem;
+  }*/
+  .fortP {
     height: 14rem;
   }
-  #Fort_p .card_image {
+  .fortP .cardImage {
     height: 70%;
   }
-  #Ile_f {
+  .ileF {
     height: 14rem;
   }
-  #Ile_f .card_image {
+  .ileF .cardImage {
     height: 70%;
   }
-  #Parc_c {
+  .parcC {
     height: 14rem;
   }
-  #Parc_c .card_image {
+  .parcC .cardImage {
     height: 70%;
   }
-  #Notre_d {
+  .notreD {
     height: 14rem;
   }
-  #Notre_d .card_image {
+  .notreD .cardImage {
     height: 70%;
   }
-  #Parc_l {
+  .parcL {
     height: 14rem;
   }
-  #Parc_l .card_image {
+  .parcL .cardImage {
     height: 70%;
   }
 }
@@ -761,34 +739,32 @@ article:hover {/* RV privilégier les class*/
 footer {
   background-color: var(--gray);
 }
-.footer_list {
+.footerLists {
   width: 80%;
   margin-left: 1rem;
   display: flex;
   justify-content: space-between;
 }
-.footer_list_1,
-.footer_list_2,
-.footer_list_3 {
+.footerList {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-.footer_list h3 {
+.footerList h3 {
   font-weight: 800;
   margin-bottom: 2rem;
 }
-.footer_list ul {
+.footerList ul {
   list-style-type: none;
   padding-left: 0;
 }
-.footer_list li {
+.footerList li {
   margin-bottom: 1rem;
   cursor: pointer;
 }
 
 /*STYLE FOOTER sur smartphone*/
 @media screen and (max-width: 767px) {
-  .footer_list {
+  .footerLists {
     display: flex;
     flex-direction: column;
     margin-left: 2rem;
