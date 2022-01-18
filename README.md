@@ -1,4 +1,4 @@
-# Projet 2 : Transformer une maquette en site web avec HTML & CSS
+# Projet 2 : Transformer une maquette en site web avec HTML5 & CSS3
 
 Parcours Développeur Web chez OPENCLASSROOM - projet 2 : Transformez une maquette en site web (OC P2)
 
