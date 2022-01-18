@@ -1,4 +1,4 @@
-# JoanKouloumba_2_14072021
+# Projet 2 : Transformer une maquette en site web avec HTML & CSS
 
 Parcours Développeur Web chez OPENCLASSROOM - projet 2 : Transformez une maquette en site web (OC P2)
 
